@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+option go_package="todo-service/todopb";
+
+package todopb;
+
+service TodoService {
+    rpc CreateTodo (CreateTodoRequest) returns (Todo);
+    rpc GetTodosByUserID (GetTodosByUserIDRequest) returns (TodoList);
+}
+
+message CreateTodoRequest {
+    string body = 1;
+    int32 user_id = 2;
+}
+
+message Todo {
+    int32 id = 1;
+    string body = 2;
+    bool done = 3;
+    int32 user_id = 4;
+}
+
+message GetTodosByUserIDRequest {
+    int32 user_id = 1;
+}
+
+message TodoList {
+    repeated Todo todos = 1;
+}

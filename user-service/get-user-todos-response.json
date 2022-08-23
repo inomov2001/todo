@@ -1,0 +1,20 @@
+{
+    "user": {
+        "id": 1,
+        "name": "Po'lat"
+    },
+    "todos": [
+        {
+            "user_id": 1,
+            "body": "Bozor qilish",
+            "done": false,
+            "id": 1
+        },
+        {
+            "user_id": 1,
+            "body": "Kitob o'qish",
+            "done": false,
+            "id": 2
+        }
+    ]
+}

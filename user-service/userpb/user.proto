@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option go_package="user-service/userpb";
+
+package userpb;
+
+service UserService {
+    rpc RegisterUser(RegisterUserRequest) returns (User);
+    rpc GetUserByID (GetUserByIDRequest) returns (User);
+}
+
+message RegisterUserRequest {
+    string name = 1;
+}
+
+message User {
+    int32 id = 1;
+    string name = 2;
+}
+
+message GetUserByIDRequest {
+    int32 id = 1;
+}
